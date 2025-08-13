@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>solution</title>
+</head>
+
+<body>
+  <button onclick="
+  console.log(`amount of order of 1 coffee= $${cofee}, 2 bagels= $${2 * bagels}, 1 soup= $${soup}  is : $${calculation}`);
+  console.log(`amount after applying 10% tax on order is : $${cost}`);//10% = 0.1
+    ">Order Amount</button>
+
+  <script>
+    let cofee = 5;
+    let bagels = 3;
+    let soup = 9;
+
+    let calculation = 5 + (2 * 3) + 9;
+    let taxAfterCost = calculation * (0.1);
+    let cost = calculation + taxAfterCost;
+  </script>
+</body>
+
+</html>
