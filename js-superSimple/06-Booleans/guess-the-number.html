@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess the number</title>
+</head>
+<body>
+    
+
+    <script>
+        let random = Math.round((Math.random() + 1) + 100)
+        let guess = prompt("guess the correct number from 1 to 100 : ");
+        if(random == guess) {
+            console.log(`you guess the correct number ${guess}`)
+        } else {
+            console.log(`you did not guess the correct number and the number is ${random}`)
+        }
+    </script>
+</body>
+</html>

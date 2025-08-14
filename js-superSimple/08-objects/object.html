@@ -43,6 +43,19 @@
         console.log(product2['delivery-time']);
         console.log(product2.rating.count)
         product2.fun();
+        // JSON
+        const json = JSON.stringify(product2);
+        console.log(JSON.parse(json))
+
+        // destructring of an object
+
+        const obj = {
+            message: "god morning",
+            price: 999
+        };
+        // const message = obj.message;
+        const {message, price} = obj;
+       
     </script>
 </body>
 </html>

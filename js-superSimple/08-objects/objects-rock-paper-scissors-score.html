@@ -98,16 +98,32 @@
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;
+        localStorage.removeItem('score');
     ">reset score</button>
 
     <script>
 
-        const score = {
+        // const score = {
+        //     wins: 0,
+        //     losses: 0,
+        //     ties: 0
+        // };
+        const score = JSON.parse(localStorage.getItem('score')) || {
             wins: 0,
-            losses: 0,
+            losses: 0, 
             ties: 0
-        };
-
+        }; //object
+        
+        // when i click reset button it gives null as output. to over come from this we use if-else stm,
+       /* if(!score){//score === null) {
+            // assign an object as initial
+            score = {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+        };*/           
+        
         // step 2: compare the moves with computer move to get results
         function playGame(playerMove) {
             const computerMove = pickComputerMove();
@@ -147,6 +163,12 @@
             } else if(result === 'Tie!') {
                 score.ties += 1;
             }
+
+
+            localStorage.setItem('score', JSON.stringify(score));
+                // localStorage.setItem('name', 'message')
+
+
             //  step 4: display the results and score
             alert (`you picked ${playerMove}. computer picked ${computerMove}, ${result}
             Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
