@@ -24,7 +24,7 @@
 				"code-runner.vscode-run"
 			],
 			"settings": {
-				"editor.fontSize": 32,
+				"editor.fontSize": 10,
 				"terminal.integrated.fontSize": 24,
 				"editor.wordWrap": "on"
 			}
